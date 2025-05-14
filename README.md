@@ -2,8 +2,8 @@
 
 
 Folder structure for Sprint 1:
-
-pytorch-model-deployment/
+```
+model-deployment/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py          # FastAPI application
@@ -15,3 +15,4 @@ pytorch-model-deployment/
 ├── pyproject.toml       # Poetry config
 ├── Dockerfile
 └── README.md
+```
