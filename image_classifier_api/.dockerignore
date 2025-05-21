@@ -1,0 +1,14 @@
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+venv
+.venv
+*.egg-info
+*.MODEL  # We'll mount this separately
+.DS_Store
+Dockerfile.dev
+docker-compose.yml
