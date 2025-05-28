@@ -35,28 +35,3 @@ EXPOSE 5000
 # Command to run the application
 CMD ["python", "-m", "app.main"]
 
-
-
-# FROM python:3.12-slim
-
-# WORKDIR /app
-
-# # Install system deps
-# RUN apt-get update && apt-get install -y --no-install-recommends \
-#     gcc python3-dev && rm -rf /var/lib/apt/lists/*
-
-# # Install Poetry
-# RUN pip install poetry
-
-# # Copy only what's needed for dependency installation
-# COPY pyproject.toml poetry.lock ./
-
-# # Install dependencies without installing the project itself
-# RUN poetry export --without-hashes --format=requirements.txt > requirements.txt && \
-#     pip install -r requirements.txt
-
-# # Copy application code
-# COPY . .
-
-# EXPOSE 5000
-# CMD ["python", "image_classifier_api/app/main.py"]
