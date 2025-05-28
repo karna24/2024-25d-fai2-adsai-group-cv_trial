@@ -22,7 +22,7 @@ cd to image_classifier_api,
 run : 
 ```
 docker build -t image-classifier-api .
- 
+
 ```
 
 
