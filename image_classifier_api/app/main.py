@@ -10,7 +10,7 @@ classifier = ImageClassifier(model_path)
 
 
 @app.get("/")
-async def root():
+def root():
     return {"message": "Hello World!"}
 
 @app.route('/predict', methods=['POST'])
