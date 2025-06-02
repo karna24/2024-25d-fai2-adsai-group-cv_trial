@@ -1,5 +1,15 @@
 version: '3.12'
 
+environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=7
+deploy:
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          count: 1
+          capabilities: [gpu]
 services:
   backend:
     build: ./image_classifier_api
