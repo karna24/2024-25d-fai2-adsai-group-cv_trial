@@ -2,13 +2,13 @@ version: '3.12'
 
 services:
   backend:
-    build: .
+    build: ./image_classifier_api
     ports:
       - "3569:5000"
     restart: unless-stopped
     # Optional healthcheck
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/predict"]
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
