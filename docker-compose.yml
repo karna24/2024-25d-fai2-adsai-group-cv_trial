@@ -4,7 +4,7 @@ services:
   backend:
     build: ./image_classifier_api
     ports:
-      - "3569:5000"
+      - "3215:5000"
     restart: unless-stopped
     # Optional healthcheck
     healthcheck:
