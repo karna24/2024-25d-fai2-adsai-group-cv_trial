@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     # Optional healthcheck
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://http://194.171.191.226:3215/health"]
+      test: ["CMD", "curl", "-f", "http://194.171.191.226:3215/health"]
       interval: 30s
       timeout: 10s
       retries: 3
