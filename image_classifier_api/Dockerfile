@@ -15,8 +15,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y curl
 # Install Poetry
 RUN pip install poetry
+
+
+
 
 # Copy only the requirements files first to leverage Docker cache
 COPY pyproject.toml poetry.lock README.md ./
