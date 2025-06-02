@@ -6,7 +6,7 @@ services:
     build: ./image_classifier_api
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-      - CUDA_VISIBLE_DEVICES=7
+      - CUDA_VISIBLE_DEVICES=2
     deploy:
       resources:
         reservations:
