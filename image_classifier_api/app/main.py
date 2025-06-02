@@ -8,6 +8,11 @@ app = Flask(__name__)
 model_path = os.getenv('MODEL_PATH', r'C:\Users\rewatkar.k\OneDrive - BUas\Desktop\2024-25d-fai2-adsai-group-cv_trial\image_classifier_api\app\best_checkpoint_resnet18.model')
 classifier = ImageClassifier(model_path)
 
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World!"}
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
